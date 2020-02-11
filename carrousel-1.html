@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrousel 1</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+
+    .carrousel{
+        width: 100%;
+        overflow: scroll;
+        /* Este nos permite tener la navegacion de imagines
+        en forma horizontal */
+        padding: 30px;
+        position: relative;
+    } 
+
+    .carrousel__container {
+        white-space: nowrap;
+        /* Esto permite tener los contenedores uno detras del
+        otro, es decir, de forma continua */
+        margin: 70px 0px;
+        padding-bottom: 10px;
+    }
+
+    .carrousel__item {
+        background-color: palevioletred;
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        /* Esta propiedad nos permite redondear los bordes
+        del contenedor */
+        overflow: hidden;
+        /* Esta propiedad nos permite ocultar el overflow
+        establecido previamente en el contenedor padre,
+        para asi poder efectuar el efecto de over sin
+        sin interrupciones en la imagen */
+        margin-right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        /* Cambia al cursor del mouse default a una mano */
+        transition: 450ms all;
+        transform-origin: center left;
+        /* Esto es para mejorar una manera mas fluida de
+        la transformacion. */
+    }
+
+    .carrousel__item:hover ~ .carrousel__item {
+        transform: translate3d(100px, 0, 0);
+        /* Esto nos permite hacer la transformacion de la
+        imagen (Alto, ancho y profundidad) */
+    }
+
+    .carrousel__container:hover .carrousel__item{
+        opacity: 0.3;
+    }
+
+    .carrousel__container:hover .carrousel__item:hover{
+        transform: scale(1.5);
+        /* Esto incrementa el tamaño de la imagen */
+        opacity: 1;
+    } 
+
+</style>
+<body>
+    <section class="carrousel">
+        <div class="carrousel__container">
+            <div class="carrousel__item">
+
+            </div>
+            <div class="carrousel__item">
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
