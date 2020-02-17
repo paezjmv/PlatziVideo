@@ -28,7 +28,7 @@
         padding-bottom: 10px;
     }
 
-    .carrousel__item {
+    .carrousel-item {
         background-color: palevioletred;
         width: 200px;
         height: 250px;
@@ -48,33 +48,65 @@
         transform-origin: center left;
         /* Esto es para mejorar una manera mas fluida de
         la transformacion. */
+        position: relative;
     }
 
-    .carrousel__item:hover ~ .carrousel__item {
+    .carrousel-item:hover ~ .carrousel-item {
         transform: translate3d(100px, 0, 0);
         /* Esto nos permite hacer la transformacion de la
         imagen (Alto, ancho y profundidad) */
     }
 
-    .carrousel__container:hover .carrousel__item{
+    .carrousel__container:hover .carrousel-item{
         opacity: 0.3;
     }
 
-    .carrousel__container:hover .carrousel__item:hover{
+    .carrousel__container:hover .carrousel-item:hover{
         transform: scale(1.5);
         /* Esto incrementa el tamaño de la imagen */
         opacity: 1;
     } 
 
+    .carrousel-item__img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+        /* Con esto logramos que la imagen recupere su forma
+        original (proporcional) */
+    }
+
+    .carrousel-iten__details {
+        background: linear-gradient(to top, rgba (0, 0, 0, 0.9) 0%, rgba (0, 0, 0, 0)100%);
+        /* Esto nos permite desvanecer el color del fondo:
+        Desde el color transparente hasta el color mas oscuro */
+        font-size: 10px;
+        opacity: 0;
+        transition: 450 ms opacity;
+        padding: 10px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+
 </style>
 <body>
     <section class="carrousel">
         <div class="carrousel__container">
-            <div class="carrousel__item">
-
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Woman view">           
+                <div class="carrousel-item__details">
+                    <div>
+                        <img src="./icon-play.png" alt="Play">
+                        <img src="./icon-plus.png" alt="Plus">
+                    </div>
+                    <p class="carrousel-item__details--title">Titulo descriptivo</p>
+                    <p class="carrousel-item__details--subtitle">2020 16+ 114</p>
+                </div>    
             </div>
-            <div class="carrousel__item">
-
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://images.pexels.com/photos/340152/pexels-photo-340152.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Man view">
             </div>
         </div>
     </section>
