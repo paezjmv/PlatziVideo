@@ -101,6 +101,19 @@ body {
     text-decoration: underline;
 }
 
+.login__container--iniciarsesion a {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.login__container--iniciarsesion a:hover {
+    text-decoration: underline;
+}
+
 .input {
     background-color: transparent;
     border-left: 0px;
