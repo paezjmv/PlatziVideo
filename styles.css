@@ -112,6 +112,8 @@ body {
     padding-left: 30px;
     width: 100%;
     position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
 } 
 
 .carrousel__container {
@@ -120,7 +122,6 @@ body {
     otro, es decir, de forma continua */
     margin: 70px 0px;
     padding-bottom: 10px;
-    padding-left: 30px;
 }
 
 .carrousel-item {
