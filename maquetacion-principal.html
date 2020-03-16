@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Title -->
+  <title>Maquetacion Principal</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__img" src="assets/logo-platzi-video-BW2.png" alt="Platzi Video">
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="assets/icon-platzivideo.png" alt="User">
+                <p>Perfil</p>
+            </div>
+            <ul>
+                <li><a href="/">Cuenta</a></li>
+                <li><a href="/">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="main">
+        <h2 class="main__title">¿Que quieres ver hoy</h2>
+        <input class="input__main" type="text" placeholder="Buscar...">
+        <!-- placeholder nos permite poner sugerencias de texto
+        dentro de la barra de input -->
+    </section>
+
+    <h2 class="categories__title">Mi lista</h2>
+
+    <section class="carrousel">
+        <div class="carrousel__container">
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Woman view">           
+                <div class="carrousel-item__details">
+                    <div>
+                        <img src="/assets/icon-play.png" alt="Play">
+                        <img src="/assets//icon-plus.png" alt="Plus">
+                    </div>
+                    <p class="carrousel-item__details--title">Titulo descriptivo</p>
+                    <p class="carrousel-item__details--subtitle">2020 16+ 114</p>
+                </div>    
+            </div>
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://images.pexels.com/photos/340152/pexels-photo-340152.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Man view">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="/">Términos de uso</a>
+        <a href="/">Declaración de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+      </footer>
+</body>
+</html>
