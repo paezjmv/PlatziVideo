@@ -1,0 +1,395 @@
+body {
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    background-color: #AB88FF;
+  }
+
+.header {
+    align-items: center;
+    background-color: #AB88FF;
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    top: 0px;
+    width: 100%;
+  }
+
+.header__img {
+    margin-left: 30px;
+    width: 200px;
+}
+
+.header__menu {
+    margin-right: 30px;
+}
+
+.header__menu ul {
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -14px;
+}
+
+.header__menu:hover ul, ul:hover {
+    display: block;
+}
+
+.header__menu li {
+    margin: 10px 0px;
+}
+
+.header__menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header__menu li a:hover {
+    text-decoration: underline;
+}
+
+.header__menu--profile {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.header__menu--profile img {
+    margin-right: 8px;
+    width: 40px;
+}
+
+.header__menu--profile p {
+    margin: 0px;
+    color: white;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+
+}
+
+.main__title {
+    color: white;
+    font-size: 25px;
+}
+
+
+.input__main {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    padding: 0px 20px;
+    width: 70%;
+}
+
+
+.categories__title {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 30px;
+    width: 100%;
+}
+
+/* CSS Carrusel */
+
+.carrousel{
+    overflow: scroll;
+    /* Este nos permite tener la navegacion de imagines
+    en forma horizontal */
+    padding-left: 30px;
+    width: 100%;
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+} 
+
+.carrousel__container {
+    white-space: nowrap;
+    /* Esto permite tener los contenedores uno detras del
+    otro, es decir, de forma continua */
+    margin: 70px 0px;
+    padding-bottom: 10px;
+}
+
+.carrousel-item {
+    background-color: palevioletred;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    /* Esta propiedad nos permite redondear los bordes
+    del contenedor */
+    overflow: hidden;
+    /* Esta propiedad nos permite ocultar el overflow
+    establecido previamente en el contenedor padre,
+    para asi poder efectuar el efecto de over sin
+    sin interrupciones en la imagen */
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    /* Cambia al cursor del mouse default a una mano */
+    transition: 450ms all;
+    transform-origin: center left;
+    /* Esto es para mejorar una manera mas fluida de
+    la transformacion. */
+    position: relative;
+}
+
+.carrousel-item:hover ~ .carrousel-item {
+    transform: translate3d(100px, 0, 0);
+    /* Esto nos permite hacer la transformacion de la
+    imagen (Alto, ancho y profundidad) */
+}
+
+.carrousel__container:hover .carrousel-item{
+    opacity: 0.3;
+}
+
+.carrousel__container:hover .carrousel-item:hover{
+    transform: scale(1.5);
+    /* Esto incrementa el tamaño de la imagen */
+    opacity: 1;
+} 
+
+.carrousel-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    /* Con esto logramos que la imagen recupere su forma
+    original (proporcional) */
+}
+
+.carrousel-iten__details {
+    background: linear-gradient(to top, rgba (0, 0, 0, 0.9) 0%, rgba (0, 0, 0, 0)100%);
+    /* Esto nos permite desvanecer el color del fondo:
+    Desde el color transparente hasta el color mas oscuro */
+    font-size: 10px;
+    opacity: 0;
+    transition: 450 ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+/* //CSS Iniciar Sesion */
+
+.login {
+    background: linear-gradient(#21c08b, #AB88FF);
+    /* Esto nos permite degradar el color del verde al morado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    min-height: calc(100vh - 200px);
+    /* Por mas alto que sea la pantalla siempre va a tener este valor */
+    /* calc es una manera de calcular, vh es una medida proporcional
+    de lo que siempre va a estar viendo el usuario */
+}
+
+.login__container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.login__container--form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__container--form label{
+    font-size: 14px;
+}
+
+.login__container--remember-me {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.login__container--remember-me a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 2px;
+}
+
+.login__container--remember-me a:hover {
+    text-decoration: underline;
+}
+
+.login__container--social-media > div {
+    /* con > div le estamos indicando que va a editar todos los
+    div dentro de esta clase */
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.login__container--social-media > div > img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.login__container--register {
+    font-size: 14px;
+}
+
+.login__container--register a {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.login__container--register a:hover {
+    text-decoration: underline;
+}
+
+.login__container--iniciarsesion a {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.login__container--iniciarsesion a:hover {
+    text-decoration: underline;
+}
+
+.input {
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid white;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    height: 50px;
+}
+
+::placeholder {
+    color: white;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+
+/* Not found 404 */
+
+.no-found {
+    width: 100%;
+    height: 100%;
+    min-width: calc(100vh - 200px);
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-found__container {
+    text-align: center;
+    color: white;
+}
+
+.no-found__container h2 {
+    font-size: 70px;
+    margin: 0px;
+}
+
+.no-found__container p {
+    padding: 10px;
+    font-size: 20px;
+    margin: 0;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);}
+    100% {transform: sacale(1);}
+}
+
+.animated__pulse {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #AB88FF;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .login__container {
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .footer {
+        align-items: flex-star t;
+        flex-direction: column;
+    }
+}
