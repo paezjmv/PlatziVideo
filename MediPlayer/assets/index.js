@@ -1,23 +1,6 @@
-function Mediaplayer(config) {
-  this.media = config.el
-}
-
-Mediaplayer.prototype.play = function() {
-  this.media.play()
-}
-
-Mediaplayer.prototype.pause = function() {
-    this.media.pause()
-}
-
-Mediaplayer.prototype.togglePlay = function() {
-    if (this.media.pause()) {
-        this.play()
-    } else {
-        this.pause()
-    }
-}  
-
+/* Importamos la funcionalidad de Mediaplayer para tener mejor
+relacionados y visualizados los archivos */
+import Mediaplayer from './MediaPlayer.js'
 
 const video = document.querySelector("video")
 const player = new Mediaplayer({el = video})
