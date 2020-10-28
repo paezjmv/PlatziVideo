@@ -54,3 +54,12 @@ Dentro de este apartado podemos encontrar el **Alcance anidado**. Al igual que l
 * **Module Scope:** Cuando se denota un script de tipo module con el atributo **type="Module"**, las variables son limitadas al archivo en el que estan declaradas. Ya no podemos acceder a las variables globales de este archivo desde la consola.
 
 Ahora podemos separar codigo que este en un archivo js suando **export e import**.
+
+## Metodos call, apply y bind
+Son metodos dentro del lenguaje que nos permiten establecer el valor de *this*, es decir **cambiar el contexto** que se va a usar cuando la funcion sea llamada.
+
+* *call* permite invocar la nueva instancia de this, añadir parametros con parentesis y ejecutarla de inmediato
+
+* *apply* permite invocar la nueva instancia de *this*, invocar parametros con [] y ejecutarla de inmediato
+
+* *bind* permite señalar la nueva instancia de this. Tiene que ser invocada despues de ser creada.

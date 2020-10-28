@@ -7,8 +7,22 @@ function Mediaplayer(config) {
 
   //Metodo solopara uso interno de la funcion "padre"
   Mediaplayer.prototype._initPlugins = function () {
+    const player = {
+      play: () => this.play(),
+      pause: () => this.pause(),
+      media: this.media,
+      //utilizamos getter para obtener una funcion virtual
+      get muted() {
+        return this.media.muted
+      },
+      //setter para cambiar el estado de muted
+      set muted(value) {
+        this.media.muted = value
+      }
+    }
+
     this.plugins.forEach(plugin => {
-      plugin.run(this)
+      plugin.run(player)
     });
   }
   

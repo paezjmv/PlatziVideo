@@ -2,7 +2,9 @@ function AutoPlay() {}
 
     //Con esto le damos acceso al autoplay
     AutoPlay.prototype.run = function (player) {
-        player.mute()
+        if (!player.muted) {
+            player.muted = true
+        }
         player.play()
     }
 
