@@ -34,7 +34,7 @@ class AutoPause {
         }
     }
 
-    private handleVisibilityChange() {
+    private githandleVisibilityChange() {
         const isVisible = document.visibilityState === "visible"
         if (isVisible) {
             this.player.play()

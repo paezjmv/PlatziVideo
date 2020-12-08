@@ -1,12 +1,12 @@
-function Mediaplayer(config) {
+class Mediaplayer {
+  constructor(config) {
     this.media = config.el
     this.plugins = config.plugins || []
 
     this._initPlugins()
   }
-
   //Metodo solo para uso interno de la funcion "padre"
-  Mediaplayer.prototype._initPlugins = function () {
+  _initPlugins() {
     const player = {
       play: () => this.play(),
       pause: () => this.pause(),
@@ -23,36 +23,38 @@ function Mediaplayer(config) {
 
     this.plugins.forEach(plugin => {
       plugin.run(player)
-    });
+    })
   }
-  
-  Mediaplayer.prototype.play = function() {
+  play() {
     this.media.play()
   }
-  
-  Mediaplayer.prototype.pause = function() {
-      this.media.pause()
+  pause() {
+    this.media.pause()
   }
-  
-  Mediaplayer.prototype.togglePlay = function() {
+  togglePlay() {
     if (this.media.paused) {
       this.play()
     } else {
       this.pause()
-    } 
+    }
   }
-
-   Mediaplayer.prototype.mute = function () {
+  mute() {
     this.media.muted = true
   }
-
-  Mediaplayer.prototype.unmute = function () {
+  unmute() {
     this.media.muted = false
   }
-
-  Mediaplayer.prototype.toggleMute = function () {
+  toggleMute() {
     this.media.muted = !this.media.muted
   }
+}
+
+  
+  
+  
+
+
+
 
 /* Exportamos la funcion para poderla utilizar en el index.js */
   export default Mediaplayer
