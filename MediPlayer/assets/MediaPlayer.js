@@ -5,7 +5,7 @@ function Mediaplayer(config) {
     this._initPlugins()
   }
 
-  //Metodo solopara uso interno de la funcion "padre"
+  //Metodo solo para uso interno de la funcion "padre"
   Mediaplayer.prototype._initPlugins = function () {
     const player = {
       play: () => this.play(),
