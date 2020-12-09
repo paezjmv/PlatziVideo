@@ -1,8 +1,9 @@
-import Mediaplayer from "../MediaPlayer"
+import MediaPlayer from "../MediaPlayer"
 
 class AutoPause {
     private threshold: number
-    player: Mediaplayer
+    player: MediaPlayer
+    handleVisibilityChange: any
 
     constructor() {
         this.threshold = 0.25
@@ -10,7 +11,7 @@ class AutoPause {
         this.handleVisibilityChange = this.handleVisibilityChange.bind(this)
     }
 
-    run(player){
+    run(player) {
         this.player = player
 
         const observer = new IntersectionObserver(this.handleIntersection, {

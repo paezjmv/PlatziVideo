@@ -1,23 +1,23 @@
 /* Importamos la funcionalidad de Mediaplayer para tener mejor
 relacionados y visualizados los archivos */
-import Mediaplayer from './MediaPlayer.js'
+import MediaPlayer from './MediaPlayer'
 /* Importamos la funcionalidad de AutpPlay para tener mejor
 relacionados y visualizados los archivos */
-import AutoPlay from './plugins/AutoPlay.js'
+import AutoPlay from './plugins/AutoPlay'
 /* Importamos la funcionalidad de AutoPause para tener mejor
 relacionados y visualizados los archivos */
-import AutoPause from './plugins/AutoPause.ts'
+import AutoPause from './plugins/AutoPause'
 
 const video = document.querySelector("video")
-const player =  new Mediaplayer({ el: video, plugins: [new AutoPlay(), new AutoPause()] })
+const player =  new MediaPlayer({ el: video, plugins: [new AutoPlay(), new AutoPause()] })
 
-const playButton = document.querySelector('#playButton')
+const playButton: HTMLMediaElement = document.querySelector('#playButton')
 playButton.onclick = () => player.togglePlay()
 
-const muteButton = document.querySelector('#muteButton')
+const muteButton: HTMLMediaElement = document.querySelector('#muteButton')
 muteButton.onclick = () => player.toggleMute()
 
-if ('servideWorker' in navigator) {
+if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').catch(error => {
         console.log(error.message)
     })

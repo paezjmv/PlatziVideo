@@ -1,4 +1,4 @@
-// Interfaces
+/* // Interfaces
 
 enum Color {
     Rojo = 'Rojo',
@@ -28,4 +28,4 @@ rect.toString = function () {
     return this.color ? `Un rectangulo ${this.color}` : `Un rectangulo`
 }
 
-console.log(rect.toString())  // Un rectangulo Rojo
+console.log(rect.toString())  // Un rectangulo Rojo */
