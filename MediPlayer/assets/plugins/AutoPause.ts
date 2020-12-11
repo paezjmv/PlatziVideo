@@ -20,7 +20,7 @@ class AutoPause {
 
         observer.observe(this.player.media)
 
-        document.addEventListener("visibilitychange", this.handleVisibilityChange)
+        document.addEventListener("VisibilityChange", this.handleVisibilityChange)
     }
 
     private handleIntersection(entries: IntersectionObserverEntry[]) {
