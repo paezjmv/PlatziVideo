@@ -3,7 +3,6 @@ import MediaPlayer from "../MediaPlayer"
 class AutoPause {
     private threshold: number
     player: MediaPlayer
-    handleVisibilityChange: any
 
     constructor() {
         this.threshold = 0.25
@@ -35,7 +34,7 @@ class AutoPause {
         }
     }
 
-    private githandleVisibilityChange() {
+    private handleVisibilityChange() {
         const isVisible = document.visibilityState === "visible"
         if (isVisible) {
             this.player.play()
