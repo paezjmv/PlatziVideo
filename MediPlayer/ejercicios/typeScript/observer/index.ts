@@ -3,7 +3,7 @@ interface Observer {
 }
 
 interface Subject {
-    subscribe: (observer: Observer) => void
+    subscribe: (observer: Observer) => void //Void indica que es indefinido
     unsubscribe: (observer: Observer) => void
 }
 
@@ -13,7 +13,7 @@ class BitcoinPrice implements Subject {
     constructor() {
         const el: HTMLInputElement = document.querySelector('#value')
         el.addEventListener('input', () => {
-            this.notify(el.value)
+            this.notify(el.value);
         })
     }
 
@@ -35,7 +35,7 @@ class BitcoinPrice implements Subject {
 }
 
 class PriceDisplay implements Observer {
-    private el: HTMLInputElement
+    private el: HTMLElement
 
     constructor() {
         this.el = document.querySelector('#price')
