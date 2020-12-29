@@ -7,9 +7,10 @@ import AutoPlay from './plugins/AutoPlay'
 /* Importamos la funcionalidad de AutoPause para tener mejor
 relacionados y visualizados los archivos */
 import AutoPause from './plugins/AutoPause'
+import Ads from './plugins/Ads'
 
 const video = document.querySelector("video")
-const player =  new MediaPlayer({ el: video, plugins: [new AutoPlay(), new AutoPause()] })
+const player =  new MediaPlayer({ el: video, plugins: [new AutoPlay(), new AutoPause(), new Ads()] })
 
 const playButton: HTMLMediaElement = document.querySelector('#playButton')
 playButton.onclick = () => player.togglePlay()
