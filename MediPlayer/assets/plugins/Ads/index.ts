@@ -1,5 +1,5 @@
 import MediaPlayer from '../../MediaPlayer'
-import Ads, { Ad } from './Ads'
+import Ads, { Ad } from './ads'
 
 class AdsPlugin {
     private ads: Ads
@@ -36,13 +36,13 @@ class AdsPlugin {
         this.currentAd = ad
         this.adsContainer.innerHTML = `
             <div class="ads">
-            <a  class="ads__link" href="${this.currentAd.url}" target="_blank">
-            <img class="ads__img" src="${this.currentAd.imageUrl}" />
-            <div class="ads__info">
-                <h5 class="ads__title">${this.currentAd.title}</h5>
-                <p class="ads__body">${this.currentAd.body}</p>
-            </div>
-            </a>
+                <a  class="ads__link" href="${this.currentAd.url}" target="_blank">
+                    <img class="ads__img" src="${this.currentAd.imageUrl}" />
+                    <div class="ads__info">
+                        <h5 class="ads__title">${this.currentAd.title}</h5>
+                        <p class="ads__body">${this.currentAd.body}</p>
+                    </div>
+                </a>
             </div>
         `
 
