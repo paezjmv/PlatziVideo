@@ -1,5 +1,5 @@
 import MediaPlayer from '../../MediaPlayer'
-import Ads, { Ad } from './ads'
+import Ads, { Ad } from './Ads'
 
 class AdsPlugin {
     private ads: Ads
@@ -32,6 +32,7 @@ class AdsPlugin {
         if (this.currentAd) {
             return 
         }
+
         const ad = this.ads.getAd()
         this.currentAd = ad
         this.adsContainer.innerHTML = `
@@ -44,11 +45,11 @@ class AdsPlugin {
                     </div>
                 </a>
             </div>
-        `
+        `;
 
         setTimeout(() => {
             this.currentAd = null
-            this.adsContainer.innerHTML = ``
+            this.adsContainer.innerHTML = ''
         }, 10000)
     }
 }
